@@ -7,25 +7,18 @@ def initialize(first,second)
 	@second = second	
 end
 
+def calc(operation)
+    if operation == "plus"
+      result = @first + @second
+    elsif operation == "minus"
+      result = @first - @second
+    elsif operation == "multiplied by"
+      result = @first * @second 
+    elsif operation == "divided by"
+      result = @first / @second
+    end 
 
-def	add
-  	result = @first + @second
-  	"#{@first} + #{@second} = #{result}"
-end
-
-def	subtract
-  	result = @first - @second
-  	"#{@first} - #{@second} = #{result}"
-end
-
-def	multiply
-  	result = @first * @second
-  	"#{@first} x #{@second} = #{result}"
-end
-
-def	divide
-  	result = @first / @second
-  	"#{@first} / #{@second} = #{result}"
+    "#{@first} #{operation} #{@second} = #{result}"
 end
 
 end
